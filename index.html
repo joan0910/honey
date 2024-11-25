@@ -7,52 +7,123 @@
     <title>Document</title>
 </head>
 
-<body>
+<body style="margin: 0;padding: 0;">
     <style>
-        .menu {
-            display: inline-block;
+        .carousel {
+            display: flex;
+            overflow: hidden;
+        }
+
+        .carousel-item>img {
+            object-fit: cover;
+            object-position: center center;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .carousel-item {
             position: relative;
+            flex-shrink: 0;
+            animation-name: carousel;
+            animation-duration: 9s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
         }
 
-        .menu>ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: none;
+        .carousel-item>.mask {
             position: absolute;
-           
+            height: 100vh;
+            width: 100%;
+            background: linear-gradient(90deg, black, rgb(233, 220, 220));
+            opacity: 0.3;
+            z-index: 666;
+            top: 0;
+            left: 0;
+
         }
 
-        .menu:hover>ul {
-            display: block;
-        }
-
-        .menu>ul>li {
+        .carousel-item>.text>a {
             border-style: solid;
-            border-color: rgb(71, 177, 85);
-            border-width: 1px;
-            padding: 5px;
-            background-color: azure;
-        }
-        .menu>ul>li:hover {
-            background-color: rgb(66, 114, 74);
-
-        }
-        .menu>ul>li>a{
-            color: black;
+            border-color: white;
+            padding: 10px;
+            color: white;
             text-decoration: none;
+            font-size: medium;
+            box-shadow: 0px 0px 10px white;
         }
 
+        .carousel-item>.text {
+            color: white;
+            font-size: xx-large;
+            position: absolute;
+            z-index: 999;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        @keyframes carousel {
+            0% {
+                transform: translate(-0vw, 0)
+            }
+
+            28% {
+                transform: translate(-0vw, 0)
+            }
+
+            33% {
+                transform: translate(-100vw, 0)
+            }
+
+            61% {
+                transform: translate(-100vw, 0)
+            }
+
+            66% {
+                transform: translate(-200vw, 0)
+            }
+
+            100% {
+                transform: translate(-200vw, 0)
+            }
+
+        }
     </style>
-    <div class="menu">
-        <a>下拉選單</a>
-        <ul>
-            <li>項目1</li>
-            <li>項目2</li>
-            <li>項目3</li>
-        </ul>
+    <div class="carousel">
+        <div class="carousel-item">
+            <img src="./img/pexels-8moments-1183099.jpg" alt="">
+            <div class="mask">
+
+            </div>
+            <div class='text'>
+                <p>這裡的美景讓人心曠神怡。群山環抱，溪水潺潺，讓您在繁忙的生活中找到一處心靈的棲息地。來一場與大自然的對話，拋開壓力，重拾簡單的快樂~</p>
+                <a href="">了解更多</a>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="./img/pexels-felixmittermeier-1146134.jpg" alt="">
+            <div class="mask">
+
+            </div>
+            <div class='text'>
+                <p>在這片夜空之下，無數的星星如繁花般點綴著深藍的天幕，閃爍著神秘的光芒。仰望星空，彷彿進入一個無限的夢境，讓心靈得以放飛、思緒得以遠行~</p>
+                <a href="">了解更多</a>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="./img/pexels-maoriginalphotography-1485894.jpg" alt="">
+            <div class="mask">
+
+            </div>
+            <div class='text'>
+                <p>大橋遠眺，景色一覽無遺</p>
+                <p>站在橋上，遠眺四周的壯麗風光，城市的繁華和河流的寧靜交織成一幅動人的畫卷。這裡是欣賞全景的最佳位置，讓人感受到視野的開闊與自由</p>
+
+                <a href="">了解更多</a>
+            </div>
+        </div>
+
     </div>
-    <hr>
 </body>
 
 </html>

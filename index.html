@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .menu {
+            display: inline-block;
+            position: relative;
+        }
+
+        .menu>ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: none;
+            position: absolute;
+           
+        }
+
+        .menu:hover>ul {
+            display: block;
+        }
+
+        .menu>ul>li {
+            border-style: solid;
+            border-color: rgb(71, 177, 85);
+            border-width: 1px;
+            padding: 5px;
+            background-color: azure;
+        }
+        .menu>ul>li:hover {
+            background-color: rgb(66, 114, 74);
+
+        }
+        .menu>ul>li>a{
+            color: black;
+            text-decoration: none;
+        }
+
+    </style>
+    <div class="menu">
+        <a>下拉選單</a>
+        <ul>
+            <li>項目1</li>
+            <li>項目2</li>
+            <li>項目3</li>
+        </ul>
+    </div>
+    <hr>
+</body>
+
+</html>

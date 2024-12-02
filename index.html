@@ -4,24 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>若恩甜點網站</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+
 </head>
 
 <body style="margin: 0;padding: 0;">
     <style>
-        .carousel {
+        .carousel-css {
             display: flex;
             overflow: hidden;
         }
 
-        .carousel-item>img {
+        .carousel-item-css>img {
             object-fit: cover;
             object-position: center center;
             width: 100vw;
             height: 100vh;
         }
 
-        .carousel-item {
+        .carousel-item-css {
             position: relative;
             flex-shrink: 0;
             animation-name: carousel;
@@ -30,7 +36,7 @@
             animation-iteration-count: infinite;
         }
 
-        .carousel-item>.mask {
+        .carousel-item-css>.mask {
             position: absolute;
             height: 100vh;
             width: 100%;
@@ -42,7 +48,7 @@
 
         }
 
-        .carousel-item>.text>a {
+        .carousel-item-css>.text>a {
             border-style: solid;
             border-color: white;
             padding: 10px;
@@ -52,7 +58,7 @@
             box-shadow: 0px 0px 10px white;
         }
 
-        .carousel-item>.text {
+        .carousel-item-css>.text {
             color: white;
             font-size: xx-large;
             position: absolute;
@@ -89,8 +95,42 @@
 
         }
     </style>
-    <div class="carousel">
-        <div class="carousel-item">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">若恩甜點店</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">首頁</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">關於我</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            美食分類
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="https://joan0910.github.io/joan_sweet/">草莓系列</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="carousel-css">
+        <div class="carousel-item-css">
             <img src="./img/pexels-8moments-1183099.jpg" alt="">
             <div class="mask">
 
@@ -102,32 +142,188 @@
                 <a href="">了解更多</a>
             </div>
         </div>
-        <div class="carousel-item">
+        <div class="carousel-item-css">
             <img src="./img/pexels-felixmittermeier-1146134.jpg" alt="">
             <div class="mask">
 
             </div>
             <div class='text'>
                 <p style="font-weight: bolder;font-size: larger;">星空夢語：靈魂的遠行</p>
-                <p style="font-style: italic;"> "The Realm of Boundless Views: A Symphony of Vibrancy and Tranquility"</p>
+                <p style="font-style: italic;"> "The Realm of Boundless Views: A Symphony of Vibrancy and Tranquility"
+                </p>
                 <p>在這片夜空之下，無數的星星如繁花般點綴著深藍的天幕，閃爍著神秘的光芒。仰望星空，彷彿進入一個無限的夢境，讓心靈得以放飛、思緒得以遠行~</p>
                 <a href="">了解更多</a>
             </div>
         </div>
-        <div class="carousel-item">
+        <div class="carousel-item-css">
             <img src="./img/pexels-maoriginalphotography-1485894.jpg" alt="">
             <div class="mask">
 
             </div>
             <div class='text'>
                 <p style="font-weight: bolder;">極目之境：繁華與寧靜的交響</p>
-                <p style="font-style: italic;">"The Realm of Boundless Views: A Symphony of Vibrancy and Tranquility"</p>
+                <p style="font-style: italic;">"The Realm of Boundless Views: A Symphony of Vibrancy and Tranquility"
+                </p>
                 <p>遠眺四周的壯麗風光，城市的繁華和河流的寧靜交織成一幅動人的畫卷。這裡是欣賞全景的最佳位置，讓人感受到視野的開闊與自由</p>
                 <a href="">了解更多</a>
             </div>
         </div>
 
     </div>
+    <div class="container-fluid bg-secondary ">
+        <div class="row justify-content-center">
+            <div class="col-9 bg-dark min-vh-100 text-white " style="margin-top: 50px; margin-bottom: 50px;padding-bottom: 150px;">
+                <div class="row align-items-center">
+                    <div class="col-6">
+                        <!-- 左 -->
+                        <div style="padding: 50px;">
+                            <h5>品牌故事</h5>
+                            <p style="color: rgb(86, 121, 121);font-size: 70px;">BRAND STORY</p>
+
+                            <h3>甜點饗宴</h3>
+                            <p>Enjoy Food. Enjoy Sweet.</p>
+
+                            <img style="width: 100%;"
+                                src="https://hips.hearstapps.com/hmg-prod/images/465863022-942396891268347-5918408500592201746-n-672ad05024b5f.jpg"
+                                alt="" sizes="" srcset="">
+                        </div>
+
+
+                    </div>
+                    <div class="col-6">
+                        <!-- 佑 -->
+                        <img style="width: 100%;"
+                            src="https://www.welcometw.com/wp-content/uploads/2022/04/@sasa_finger_licking-3-682x851.jpg"
+                            alt="">
+
+                    </div>
+                </div>
+
+                <div style="margin-top: 150px;" class="row align-items-center justify-content-center">
+                    <h1 style="text-align: center;font-size: 60px;">吃得 <span style="color:  rgb(86, 121, 121)">開心</span>
+                        ，吃得
+                        <span style="color: rgb(86, 121, 121);"> 安心</span>!
+                    </h1>
+                    <p style="text-align: center;font-size: 20px;">
+                        一直都是我們的服務精神！
+                    </p>
+                    <p style="text-align: center;font-size: 20px;">
+                        以創新的經營方式帶給顧客<span style="color: rgb(86, 121, 121);">全新的味蕾饗宴</span>。
+
+                    </p>
+                    <p style="text-align: center;font-size: 20px;">
+                        持續經營了幾家分店後，我們沒有故步自封，而是依然分析市場的需求來做適時的調整，
+
+                    </p>
+                    <p style="text-align: center;font-size: 20px;">
+                        希望讓來店的顧客吃得開心，吃得安心。
+
+                    </p>
+
+                </div>
+                <div style="margin-top: 150px;color: black;" class="row align-items-center ">
+                    <div class="col-12">
+                        <h1 class="text-center my-5" style="color: rgb(86, 121, 121);font-size: 60px;">商品介紹</h1>
+                    </div>
+                    <div class="col-4">
+                        <div class="row justify-content-center">
+                            <div class="card" style="width: 90%">
+                                <img src="https://hips.hearstapps.com/hmg-prod/images/gegergterg-664acebd8600d.jpg?crop=0.317xw:0.634xh;0.345xw,0.206xh&resize=640:*"
+                                    class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title fw-bolder " style="font-size: 30px">白草莓馬卡龍</h5>
+                                    <p class="card-text text-wrap">酸甜可口、冬季限定草莓 、獨家口味 | 季節限定 </p>
+                                    <p class="text-danger fw-bolder">NT : 799</p>
+
+                                    <a href="#" class="btn btn-primary">前往購買</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-4">
+                        <div class="row justify-content-center">
+                            <div class="card" style="width: 90%">
+                                <img src="https://hips.hearstapps.com/hmg-prod/images/gegergterg-664acebd8600d.jpg?crop=0.317xw:0.634xh;0.345xw,0.206xh&resize=640:*"
+                                    class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title fw-bolder " style="font-size: 30px">白草莓馬卡龍</h5>
+                                    <p class="card-text text-wrap">酸甜可口、冬季限定草莓 、獨家口味 | 季節限定 </p>
+                                    <p class="text-danger fw-bolder">NT : 799</p>
+
+                                    <a href="#" class="btn btn-primary">前往購買</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-4">
+                        <div class="row justify-content-center">
+                            <div class="card" style="width: 90%">
+                                <img src="https://hips.hearstapps.com/hmg-prod/images/gegergterg-664acebd8600d.jpg?crop=0.317xw:0.634xh;0.345xw,0.206xh&resize=640:*"
+                                    class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title fw-bolder " style="font-size: 30px">白草莓馬卡龍</h5>
+                                    <p class="card-text text-wrap">酸甜可口、冬季限定草莓 、獨家口味 | 季節限定 </p>
+                                    <p class="text-danger fw-bolder">NT : 799</p>
+
+                                    <a href="#" class="btn btn-primary">前往購買</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    
+                </div>
+            </div>
+
+        </div>
+        <div class="row  bg-dark pt-2 p-md-1 text-white mt-2 mt-md-0" " >
+            <div class="col-md-6">
+                <h1 class="fs-5">
+                    <b class='fs-2 text-danger pe-3'>若恩甜點店 <br class="d-block d-md-none" /> </b> 只 | 款 | 待 | 心 | 中 | 最 | 重 | 要 | 的 | 人
+    
+    
+                </h1>
+                <p class="">
+                    Copyright ©若恩甜點店 all rights reserved. Designed by Flashaim
+    
+                </p>
+            </div>
+            <div class="col-md-6  align-items-center justify-content-end ">
+                <div class="row">
+                    <div class=" col-md-3 d-block d-md-none">
+                        <p class="mb-1">※ 營業時間 : 午 11:30 ~ 14:30 | 晚 17:30 ~ 22:00</p>
+                        <p class="mb-1">※ 客服電話 : (02) 2519966</p>
+    
+    
+    
+                    </div>
+                    <div class="text-end col-md-3 d-md-block d-none">
+                        <p class="mb-1">※ 營業時間</p>
+                        <p class="m-0">午 11:30 ~ 14:30</p>
+                        <p class="m-0">晚 17:30 ~ 22:00</p>
+    
+    
+                    </div>
+                 
+    
+    
+                </div>
+    
+    
+    
+    
+    
+            </div>
+    
+    
+    
+    
+        </div>
+
+    </div>
+
 </body>
 
 </html>
